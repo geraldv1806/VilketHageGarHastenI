@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILKET HAGE GÅR HÄSTEN I?</title>
+    <style>
+        body {
+            background-color: darkblue;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        #dropdown {
+            margin: 20px auto;
+            padding: 10px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+        #resultBox {
+            margin: 20px auto;
+            padding: 20px;
+            width: 300px;
+            background-color: yellow;
+            font-size: 76px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Embedded Picture -->
+    <img src="HagKarta.jpg" alt="Embedded Image" style="width: 100%; max-width: 600px;">
+
+    <!-- Dropdown Box -->
+    <select id="dropdown" onchange="updateResult()">
+        <option value="">Select a name</option>
+        <!-- Add 60 names -->
+        <option value="1">Name 1</option>
+        <option value="2">Name 2</option>
+        <option value="3">Name 3</option>
+        <!-- Add more names as needed -->
+        <option value="21">REDMAN</option>
+    </select>
+
+    <!-- Result Box -->
+    <div id="resultBox">0</div>
+
+    <script>
+        function updateResult() {
+            const dropdown = document.getElementById('dropdown');
+            const resultBox = document.getElementById('resultBox');
+            const selectedValue = dropdown.value;
+            // Update the result based on the selected name
+            resultBox.innerText = selectedValue ? selectedValue : '0';
+        }
+    </script>
+
+</body>
+</html>
